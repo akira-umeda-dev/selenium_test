@@ -1,0 +1,30 @@
+selenium-test------.devcontainer
+                |   ∟devcontainer.json
+                |--.vscode
+                |   ∟extension.json
+                |   ∟launch.json
+                |   ∟settings.json
+                |--docker
+                |   ∟Dockerfile
+                |--script
+                |   ∟engine（抽象度高：クラス宣言）
+                |   |  ∟__init__.py
+                |   |  ∟datetime_utils.py
+                |   |  ∟path_manager.py
+                |   |  ∟report_directory.py
+                |   |  ∟save_screenshot.py
+                |   |  ∟text_report.py
+                |   ∟lib（抽象度中モジュール：関数宣言）
+                |   |  ∟__init__.py
+                |   |  ∟functions.py
+                |   ∟test（抽象度度低：テストケーススクリプト）
+                |   |  ∟results（結果格納用ディレクトリ）
+                |   |  ∟test_case_01.py
+                |   |  ∟test_case_02.py
+                |   ∟__init__.py
+                |--.gitignore
+                |--directory_tree
+                |--docker-compose.yml
+                |--README.txt
+                |--requirements.txt
+                |--selenium_test.code-workspace

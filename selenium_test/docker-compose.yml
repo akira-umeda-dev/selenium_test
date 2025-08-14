@@ -1,0 +1,24 @@
+services:
+  selenium:
+    image: selenium/standalone-chrome:latest
+    ports:
+      - "4444:4444"
+      - "7900:7900"
+    shm_size: "2gb"
+
+  python:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    depends_on:
+      - selenium
+    working_dir: /selenium_test
+    volumes:
+      - .:/selenium_test
+    environment:
+      - PYTHONPATH=/selenium_test
+    tty: true
+    command: bash
+
+
+
